@@ -30,7 +30,7 @@ body{
     overflow-wrap: break-word;
     white-space: wrap;
     height: 16%;
-    background-image: radial-gradient(rgb(67, 250, 0),rgb(2, 221, 2),rgb(1, 172, 1),rgb(0, 120, 0));                              
+    background-image: radial-gradient(rgb(67, 250, 0),rgb(2, 221, 2),rgb(1, 172, 1),rgb(255, 120, 255));                              
 }
 .stats {
     display:inline-flex;
