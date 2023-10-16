@@ -1,5 +1,5 @@
  function addAttackActions(){
-   actionList.push(new Action("Weak","BasicAttack",
+   actionList.push(new Action("Attack","WeakAttack",
     (stats,element)=>{return true},
     (stats,element)=>{
         
