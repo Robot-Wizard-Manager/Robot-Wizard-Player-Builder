@@ -9,9 +9,11 @@ typeSelect.setAttribute("onchange","setActions(this)");
 const actionLabel = getLabel("Action: ","action");
 const actionSelect = getSelect("action",["None","test"],"action");
 */
+alert("Hello! I am an alert box!! First");
 var listForActions = document.getElementById("actionList");
+alert("Hello! I am an alert box!! Middle");
 var list = document.getElementsByClassName('FullAction')[0];
-alert("Hello! I am an alert box!!");
+alert("Hello! I am an alert box!! Last");
 
 //addAction();
 function addAction(){
