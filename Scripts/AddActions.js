@@ -11,7 +11,7 @@ const actionSelect = getSelect("action",["None","test"],"action");
 */
 var listForActions = document.getElementById("actionList");
 var list = document.getElementsByClassName('FullAction')[0];
-
+alert("Hello! I am an alert box!!");
 
 //addAction();
 function addAction(){
