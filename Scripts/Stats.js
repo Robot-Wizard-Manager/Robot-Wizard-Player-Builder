@@ -38,7 +38,7 @@ function healthRegenUpdate(input){
 }
 
 function check(input){
-   
+   try{
     
     var stats = document.querySelectorAll(".stats input");
     var level = document.getElementById("level").value;
@@ -56,7 +56,10 @@ function check(input){
     
     buildStats();
     updateAllActions();
-
+   }catch(error)
+   {
+    alert(error);
+   }
    
 }
 function levelChange(value){
