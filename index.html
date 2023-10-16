@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blank template</title>
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <div class="staticArea">
+            <div class="level">
+                 
+                <label for="level">Level</label>
+                <input type="number" id="level" name="level" min="1" value="1" oninput="levelChange(this.value)">
+                
+            </div>
+            <div class="actionStats">
+                <span class="stats attack">
+                    <span class="display">
+                    <label for="attack" title="Extra Damage">Attack</label> 
+                    <input type="number" name="attack" min="0" max="1" value="0" oninput="check(this)">
+                    </span>
+                </span>
+                <span class="stats defense">
+                    <span class="display">
+                    <label for="defense" title="Extra Defense">Defense</label> 
+                    <input type="number" name="defense" min="0" max="1" value="0" oninput="check(this)">
+                    </span>
+                </span>
+                <span class="stats special">
+                    <span class="display">
+                    <label for="special" title="Unlock Special Actions">Special</label> 
+                    <input type="number" name="special" min="0" max="1" value="0" oninput="check(this)">
+                    </span>
+                </span>
+                
+            </div>
+            <div class = "baseStats">
+                    
+                    <span class="stats health">
+                        <span class="display">
+                        <label for="maxHealth" title="Max and starting helath">Max Health</label> 
+                        <input type="number" name="maxHealth" min="0" max="1" value="0" oninput="maxHealthUpdate(this)">
+                        <label for="maxHealth" id="MaxHealth">1000</label>
+                         </span>
+                    </span>
+                    <span class="stats health">
+                         <span class="display">
+                        <label for="healthRegen" title="Amount of health you gain back each turn">Health Regen</label> 
+                        <input type="number" name="healthRegen" min="0" max="1" value="0" oninput="healthRegenUpdate(this)" >
+                        <label for="maxHealth" id="HealthRegen">25</label>
+                         </span>
+                    </span>
+                    <span class="stats mana" title="Each mana you have stored increase action stats by .1%">
+                         <span class="display">
+                        <label for="maxMana">Max Mana</label> 
+                        <input type="number" name="maxMana" min="0" max="1" value="0" oninput="maxManaUpdate(this)">
+                        <label for="maxMana" id="MaxMana">1000</label> 
+                         </span>
+                    </span>
+                    <span class="stats mana">
+                         <span class="display">
+                        <label for="manaRegen" title="Amount of mana you gain back each turn">Mana Regen</label> 
+                        <input type="number" name="manaRegen" min="0" max="1" value="0" oninput="manaRegenUpdate(this)">
+                        <label for="manaRegen" id="ManaRegen">100</label> 
+                         </span>
+                    </span>
+                    
+            </div>
+            <div class="elements">
+                <span class="stats water">
+                    <span class="display">
+                    <label for="water">Water</label>
+                    <input type="number" name="water" min="0" max="1" value="0" oninput="check(this)">
+                    </span>
+                </span>
+                <span class="stats fire">
+                     <span class="display">
+                    <label for="fire">Fire</label> 
+                    <input type="number" name="fire" min="0" max="1" value="0" oninput="check(this)">
+                     </span>
+                </span>
+                <span class="stats earth">
+                     <span class="display">
+                    <label for="earth">Earth</label> 
+                    <input type="number" name="earth" min="0" max="1" value="0" oninput="check(this)">
+                     </span>
+                </span>
+                <span class="stats air">
+                    <span class="display">
+                    <label for="air">Air</label> 
+                    <input type="number" name="air" min="0" max="1" value="0" oninput="check(this)">
+                     </span>
+                </span>
+                
+
+            </div>
+            <div class="buttons">
+                <span>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZq1-JEpBhPP50s_JB_tvj55pkWalj7z70MoKrKVVbDVS44A/viewform" target="_blank">
+                    form</a>
+                </span>
+                <button onclick="addAction()">addAction</button>
+                <button onclick="build()">build</button>
+                <button onclick="copyBuild()">copy</button>  
+            </div>
+            
+        </div>
+        <div class="buildArea">
+                <p id="buildText"></p>
+            </div>
+        <div class = "mainArea">
+       
+        <div class="actions">
+            
+            <ol id="actionList">
+                <li class="FullAction">
+                    <div>
+                    <label for="Element">Element</label>
+                    <select name="Element" id="Element" onchange="actionUpdate(this.parentElement)">
+                        <option value= "None">None</option>
+                        <option value="Water" class="Water">Water</option>
+                        <option value="Fire" class="Fire">Fire</option>
+                        <option value="Earth" class="Earth">Earth</option>
+                        <option value="Air" class="Air">Air</option>
+                    </select>
+                    <label for="Type">Type</label>
+                    <select name="Type" id="Type" onchange="actionUpdate(this.parentElement)">
+                        <option value= "None">None</option>
+                        <option value="Attack">Attack</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Special">Special</option>
+                    </select>
+                    <label for="Action">Action</label>
+                    <select id="Action" name = "Action" onchange="changeDescription(this)">
+                        <option value="None">None</option>
+                    </select>
+                    
+                   
+                        <button class="removeAction" onclick="deleteParentParent(this)"></button>  
+                    </div>  
+                </li>
+            </ol>
+        </div>
+      
+  
+        <p id="test"></p>
+        </div>
+
+        <!-- Load external JavaScript -->
+        
+        <script src="HTMLelement.js"></script>
+        <script src="Actions/attack.js"></script>
+        <script src="Actions/defense.js"></script>
+        <script src="BuildActions.js"></script>
+        <script src="scripts.js"></script>
+        <script src="Stats.js"></script>
+        <script src="Action.js"></script>
+        <script src="Build.js"></script>   
+        <script src="AddAction.js"></script>
+        
+    </body>
+
+</html>
