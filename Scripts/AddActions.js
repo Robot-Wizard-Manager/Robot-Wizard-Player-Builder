@@ -15,7 +15,6 @@ var list = document.getElementsByClassName('FullAction')[0];
 
 //addAction();
 function addAction(){
-    alert("test);
     try{
         listForActions.appendChild(list.cloneNode(true));
     }catch(error){
