@@ -1,4 +1,4 @@
-alert("Hello! I am an alert box!! In Build.js");
+
 class Data{
     constructor(stats,actions){
         this.stats = stats;
