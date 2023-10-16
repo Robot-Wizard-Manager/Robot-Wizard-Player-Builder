@@ -1,0 +1,251 @@
+/* Place your CSS styles in this file */
+body{
+    margin: 0px;
+  
+}
+.buttons{
+    display: flexbox;
+    margin-left: 20.5%;
+    width: 60%;
+    padding-bottom: 1%;
+    background-color: rgb(118, 118, 118);
+    align-content: center;
+}
+.buttons > *{
+    box-shadow: none;
+    background-color: rgb(211, 211, 211);
+    margin-top: 2px;
+    margin-left: 1px;
+    margin-right: 3px;
+    border-style: none;
+    padding:1 !important;
+}
+
+.buildArea{
+    position: fixed ;
+    top: 80%;
+    left: 20.5%;
+    width: 59.5%;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    white-space: wrap;
+    height: 16%;
+    background-image: radial-gradient(rgb(67, 250, 0),rgb(2, 221, 2),rgb(1, 172, 1),rgb(0, 120, 0));                              
+}
+.stats {
+    display:inline-flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: -2px;
+    margin-left: -2px;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    border-style: groove;
+}
+.actionStats .stats {
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 33% !important; 
+    height: 100%;
+}
+.stats span{
+    vertical-align: middle ;
+    width: 100%;
+    min-width: 0px;
+    align-content: center;
+    align-self: center;
+    display: inline-block;
+   
+}
+.stats span label{
+    min-width: 0px;
+    display: block;
+}
+.stats span p{
+   margin: none;
+    padding: none;
+    min-width: 0px;
+    display: block; 
+    background-color: aqua;
+}
+
+.stats span input{
+    min-width: 0px;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    display: block;
+}
+
+.health{
+    background-color: rgb(240, 128, 201);
+}
+.health input{
+    background-color: rgb(255, 0, 174);
+    border-style: solid;
+    border-color: rgb(136, 2, 122);
+}
+.mana{
+    background-color: rgb(0, 194, 248);
+}
+.mana input{
+    background-color: rgb(19, 184, 178);
+    border-style: solid;
+    border-color: rgb(0, 117, 109);
+}
+
+.actionStats input{
+    background-color: rgba(0, 255, 255, 0);
+}
+
+
+
+.baseStats label{
+    font-size: small;
+}
+.attack{
+    background-image: url("Images/sword.png");  
+    background-color: rgb(192, 66, 66);
+}
+.defense{
+    background-image: url("Images/shield.png");
+    background-color: rgb(73, 78, 115);
+}
+.special{
+    background-image: url("Images/star.png");
+    background-color: rgb(160, 160, 15);
+}
+.elements input{
+    background-color: transparent;
+    border-color: black;
+}
+.water{
+    background-image: linear-gradient(0deg,rgb(0, 119, 255),rgba(52, 9, 221, 0.897));
+}
+.fire{
+    background-image: linear-gradient(0deg,rgb(255, 0, 0),rgb(255, 162, 0));
+}
+.earth{
+    background-image: linear-gradient(0deg,rgb(123, 85, 9),rgb(225, 121, 41));                         
+}
+.air{
+    background-image: linear-gradient(0deg,rgb(220, 246, 245),rgb(139, 246, 246));
+}
+
+
+.level{
+   /* background-image: linear-gradient(90deg,blue 0%,rgb(5, 137, 238) 25%,red 25%,orange 50%,
+    rgb(137, 77, 5) 50%, rgba(214, 161, 13, 0.854) 75%,white 75%,rgb(144, 222, 246) 100%);                    
+    */
+    background-color: white;
+    font-size: 50px;
+    padding-bottom: 0px;
+}
+.level input{
+    width: 10%;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    background-color: transparent;
+    height: 50px   
+}
+.mainArea{
+    position: absolute;
+    overflow-y: scroll;
+    top: 35%;
+    left: 20.5%;
+    width: 59.5%;
+    height: 45%;
+    background-color: rgb(209, 209, 209);
+    padding-bottom: none;
+    z-index: 23;
+}
+
+.staticArea{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: black; 
+}
+
+
+
+.level{
+    top: 10%;
+    width: 100%;
+    height: 15%;
+    padding: none;
+}
+.baseStats {
+    float: left;
+    width: 15%;
+    margin-left: 5%;
+    height: 60%;
+    background-color: rgb(0, 130, 244);
+ 
+}
+.elements{
+    float: right;
+    width: 15%;
+    margin-right: 5%;
+    height: 60%;
+    background-color: aliceblue;
+   
+}
+
+.actionStats{
+    overflow: clip;
+    padding: none;
+    width: 60%;
+    white-space: nowrap;
+    height: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.removeAction{
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-image: url("Images/cross.png");
+    background-color: rgb(73, 1, 1);
+}
+.FullAction div{
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    white-space: normal;
+    flex-wrap: wrap; 
+}
+
+#actionList{
+    list-style-type: upper-roman;
+    padding-left: 40px;
+    color: white;
+}
+#actionList:nth-child(5n-4){
+    background-color: rgb(0, 0, 0);
+   
+}
+
+
+.FullAction:nth-child(5n-4){
+    background-color: rgb(120, 120, 120);
+}
+.FullAction:nth-child(5n-3){
+    background-color: rgb(95, 95, 95);
+}
+.FullAction:nth-child(5n-2){
+    background-color: rgb(80, 80, 80);
+}
+.FullAction:nth-child(5n-1){
+    background-color: rgb(100, 100, 100);
+}
+.FullAction:nth-child(5n){
+    background-color: rgb(125, 125, 125);
+}
