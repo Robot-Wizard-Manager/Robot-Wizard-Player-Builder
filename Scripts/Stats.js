@@ -19,21 +19,21 @@
 }
 function maxHealthUpdate(input){
     check(input); 
-    document.getElementById("MaxHealth").innerHTML = parseInt( 1000 + 1000 * levelScale);
+    document.getElementById("MaxHealth").innerHTML = parseInt( 1000 + 100 * statsValues.maxHealth);
 }
 function maxManaUpdate(input){
     check(input); 
-    document.getElementById("MaxMana").innerHTML =  parseInt(1000 + 1000 * levelScale);
+    document.getElementById("MaxMana").innerHTML =  parseInt(1000 + 100 * statsValues.maxMana);
 
 }
 function manaRegenUpdate(input){
     check(input); 
-    document.getElementById("ManaRegen").innerHTML =  parseInt(100 + 100 * levelScale);
+    document.getElementById("ManaRegen").innerHTML =  parseInt(100 + 50 * statsValues.manaRegen);
 
 }
 function healthRegenUpdate(input){
     check(input);
-    document.getElementById("HealthRegen").innerHTML =  parseInt(25 + 25 * levelScale);
+    document.getElementById("HealthRegen").innerHTML =  parseInt(25 + 5 * statsValues.healthRegen);
 
 }
 
