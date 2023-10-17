@@ -152,7 +152,7 @@
     var totalPercent = percent1+percent2
     var scale = (muli1*percent1 + muli2 * percent2)/parseFloat( totalPercent);
    // document.getElementById("test").innerHTML = muli1;
-    return Math.pow(levelScale,parseFloat(scale));
+    return levelScalec * parseFloat(scale);
 
  }
 
