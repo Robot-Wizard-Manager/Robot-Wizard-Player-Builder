@@ -40,7 +40,7 @@
     (stats,element)=>{ if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementWeak(element),stats) >= 1) {return true}; return false; },
     (stats,element)=>{
         
-        var base = parseInt(50 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
+        var base = parseInt(40 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
         var strong =parseInt( base * 3);
         var weak = parseInt(base * .5);
         var cost = 100;
@@ -53,7 +53,7 @@
     (stats,element)=>{if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementStrong(element),stats) >= 1) {return true}; return false;},
     (stats,element)=>{
         
-        var base = parseInt(50 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
+        var base = parseInt(40 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
         var strong =parseInt( base * 1.5);
         var weak = parseInt(base * .9);
         var cost = 100;
