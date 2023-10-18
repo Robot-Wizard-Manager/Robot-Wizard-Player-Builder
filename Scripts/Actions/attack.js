@@ -37,7 +37,7 @@
         `Against ${getElementWeak(element)} ${weak} damage`
     }));
    actionList.push(new Action("Attack","PrecisionAttack",
-    (stats,element)=>{ if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementStrong(element),stats) >= 1) {return true}; return false; },
+    (stats,element)=>{ if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementWeak(element),stats) >= 1) {return true}; return false; },
     (stats,element)=>{
         
         var base = parseInt(50 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
@@ -50,7 +50,7 @@
         `Against ${getElementWeak(element)} ${weak} damage`}
     ));
   actionList.push(new Action("Attack","LuckyAttack",
-    (stats,element)=>{if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementWeak(element),stats) >= 1) {return true}; return false;},
+    (stats,element)=>{if((getElementValue(element,stats) >= 1 || stats.attack >= 2) && getElementValue(getElementStrong(element),stats) >= 1) {return true}; return false;},
     (stats,element)=>{
         
         var base = parseInt(50 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
