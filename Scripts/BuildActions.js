@@ -7,10 +7,11 @@
         {return true}; return false; 
     },
     (stats,element)=>{
-        var base = parseInt(5 * getMuliOfTwo(stats.defense,50,getElementValue(element,stats),50));
+        var block = parseInt(50 + 5 * stats.attck + 5 * getElementValue(element,stats);
+        var attack = parseInt(100 + 10 * stats.attck + 10 * getElementValue(element,stats);
         var strong =parseInt( base * 1.5);
         var weak = parseInt(base * .5);
-        var cost = 13;
+        var cost = 125;
         return "If oppentent does damage then block else attack"+
         `Mana Cost ${cost}\n`+
         `Base ${base} block/attack\n`+
