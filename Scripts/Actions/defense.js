@@ -36,8 +36,8 @@
         }));
     actionList.push(new Action("Defense","LuckyDefense",(stats,element)=>{ if((getElementValue(element,stats) >= 1 || stats.defense >= 2) && getElementValue(getElementStrong(element),stats) >= 1) {return true}; return false; },
     (stats,element)=>{
-        var base = parseInt(50 * getMuliOfTwo(stats.defense,50,getElementValue(element,stats),50));
-        var strong =parseInt( base * 2);
+        var base = parseInt(50 + (stats.defense * 5) + (getElementValue(element,stats) * 5) );
+        var strong =parseInt( base * 3);
         var weak = parseInt(base * .5);
         var strongElement = getElementStrong(element);
         var cost = 50;
@@ -49,9 +49,9 @@
         }));
     actionList.push(new Action("Defense","SafeDefense",(stats,element)=>{if((getElementValue(element,stats) >= 1 || stats.defense >= 2) && getElementValue(getElementWeak(element),stats) >= 1) {return true}; return false; },
     (stats,element)=>{
-        var base = parseInt(50 * getMuliOfTwo(stats.defense,50,getElementValue(element,stats),50));
+        var base = parseInt(50 + (stats.defense * 5) + (getElementValue(element,stats) * 5) );
         var strong =parseInt( base * 1.5);
-        var weak = parseInt(base * .80);
+        var weak = parseInt(base * .9);
         var strongElement = getElementStrong(element);
         var weakElement = getElementWeak(element);
         var cost = 50;
