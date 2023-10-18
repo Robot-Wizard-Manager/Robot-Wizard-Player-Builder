@@ -1,6 +1,6 @@
   function buildList(){
     addAttackActions();
-    //addDefenceActions();
+    addDefenceActions();
   /*
     actionList.push(new Action("Special","BasicSmart",(stats,element)=>{
          if(getElementValue(element,stats) >= 1 && stats.defense >= 1 && stats.attack >= 1 && stats.special >= 1)
