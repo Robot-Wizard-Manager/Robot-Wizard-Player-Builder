@@ -9,8 +9,8 @@
     (stats,element)=>{
         var block = parseInt(50 + 5 * stats.attck + 5 * getElementValue(element,stats);
         var attack = parseInt(100 + 10 * stats.attck + 10 * getElementValue(element,stats);
-        var strong =parseInt( base * 1.5);
-        var weak = parseInt(base * .5);
+        var strong =parseInt(block * 1.5);
+        var weak = parseInt(attack * .5);
         var cost = 125;
         return "If oppentent does damage then block else attack"+
         `Mana Cost ${cost}\n`+
