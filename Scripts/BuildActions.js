@@ -19,6 +19,7 @@
         `Base ${block} block or ${attack} attack\n`+
         `Against ${getElementStrong(element)} ${strongB} block or ${strongA} attack\n`+
         `Against ${getElementWeak(element)} ${weakB} block or ${weakA} attack`
+      }
     ));
     
 
