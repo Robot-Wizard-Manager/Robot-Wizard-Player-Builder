@@ -22,8 +22,9 @@
         `Against ${getElementWeak(element)} ${weakB} block or ${weakA} attack`
       }
     ));*/
-    actionList.push(new Action("Special","WeakAttack",
-    (stats,element)=>{return true},
+    actionList.push(new Action("Special","BasicSmart",
+    (stats,element)=>{ if(getElementValue(element,stats) >= 1 && stats.defense >= 1 && stats.attack >= 1 && stats.special >= 1)
+      {return true}; return false;},
     (stats,element)=>{
         
         var base = parseInt(25 + (stats.attack * 2.5) + (getElementValue(element,stats) * 2.5) );
