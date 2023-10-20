@@ -28,7 +28,7 @@ function maxManaUpdate(input){
 }
 function manaRegenUpdate(input){
     check(input); 
-    document.getElementById("ManaRegen").innerHTML =  parseInt(100 + 50 * statsValues.manaRegen);
+    document.getElementById("ManaRegen").innerHTML =  parseInt(100 + 25 * statsValues.manaRegen);
 
 }
 function healthRegenUpdate(input){
