@@ -32,7 +32,7 @@
         var strongB =parseInt(block * 1.5);
         var weakB = parseInt(block * .5);
         var strongA = parseInt(attack * 1.5);
-        var weakA = parseInt(attack * 1.5);
+        var weakA = parseInt(attack * .5);
         var cost = 125;
          return "If oppentent does damage then block else attack\n"+
         `Mana Cost ${cost}\n`+
