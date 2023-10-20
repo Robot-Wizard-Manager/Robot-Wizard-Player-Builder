@@ -34,7 +34,7 @@
         var strongA = parseInt(attack * 1.5);
         var weakA = parseInt(attack * 1.5);
         var cost = 125;
-         return "If oppentent does damage then block else attack"+
+         return "If oppentent does damage then block else attack\n"+
         `Mana Cost ${cost}\n`+
         `Base ${block} block or ${attack} attack\n`+
         `Against ${getElementStrong(element)} ${strongB} block or ${strongA} attack\n`+
