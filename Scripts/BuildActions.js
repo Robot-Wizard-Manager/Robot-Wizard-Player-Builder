@@ -27,8 +27,8 @@
       {return true}; return false;},
     (stats,element)=>{
         
-        var attack = parseInt(50 + 5 * stats.attck + 5 * getElementValue(element,stats));
-        var block = parseInt(100 + 10 * stats.attck + 10 * getElementValue(element,stats));
+        var attack = parseInt(50 + 5 * stats.attack + 5 * getElementValue(element,stats));
+        var block = parseInt(100 + 10 * stats.defense + 10 * getElementValue(element,stats));
         var strongB =parseInt(block * 1.5);
         var weakB = parseInt(block * .5);
         var strongA = parseInt(attack * 1.5);
