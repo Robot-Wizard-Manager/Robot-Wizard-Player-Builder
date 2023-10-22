@@ -69,11 +69,8 @@ function levelChange(value){
     stats.forEach((element) =>{element.setAttribute("max",level)});
 }
 buildStats();
-function buildStats(){
-    
-    var stats = document.querySelectorAll(".stats .display input");
- 
-    
+function buildStats(){  
+    var stats = document.querySelectorAll(".stats .display input");  
     var maxHealth = stats[3].value;
     var healthRegen = stats[4].value;
     var maxMana = stats[5].value;
@@ -84,14 +81,26 @@ function buildStats(){
     var water = stats[7].value;
     var fire = stats[8].value;
     var earth = stats[9].value;
-    var air = stats[10].value;
-
-    
-    statsValues = new Stats(maxHealth,healthRegen,maxMana,manaRegen,attack,defense,special,water,fire,earth,air);
-
-   
-         
-   
+    var air = stats[10].value; 
+    statsValues = new Stats(maxHealth,healthRegen,maxMana,manaRegen,attack,defense,special,water,fire,earth,air);  
+}
+function setStats(setStats){
+    var stats = document.querySelectorAll(".stats .display input");
+    var level = document.getElementById("level");
+    level.value = parseInt(setStats.maxHealth) + parseInt(setStats.healthRegen) + parseInt(setStats.maxMana) + parseInt(setStats.manaRegen)
+    + parseInt(setStats.attack) + parseInt(setStats.defense) + parseInt(setStats.special)
+    + parseInt(setStats.water) + parseInt(setStats.fire) + parseInt(setStats.earth) + parseInt(setStats.air);
+    stats[3].value = setStats.maxHealth;
+    stats[4].value = setStats.healthRegen;
+    stats[5].value = setStats.maxMana;
+    stats[6].value = setStats.manaRegen;
+    stats[0].value = setStats.attack;
+    stats[1].value = setStats.defense;
+    stats[2].value = setStats.special;
+    stats[7].value = setStats.water;
+    stats[8].value = setStats.fire;
+    stats[9].value = setStats.earth;
+    stats[10].value = setStats.air;
 }
 function test(){
     document.getElementById("test").innerHTML = "testing";

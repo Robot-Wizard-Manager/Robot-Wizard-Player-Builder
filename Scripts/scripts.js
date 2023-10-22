@@ -57,3 +57,25 @@ async function copyBuild() {
     /* Rejected - text failed to copy to the clipboard */
   }
 }
+function openLink(url){
+  window.open(url, '_blank');
+}
+function inportBuild(){
+  document.getElementById("importBuild").style.display = "flex";
+}
+function inportSummit(form){
+  document.getElementById("importBuild").style.display = "none";
+  
+  var text = form.querySelector("#build").value;
+
+  try{
+    var data = JSON.parse(text);
+    
+    setStats(data.stats);
+    buildStats();
+    setAllActions(data.actions)
+
+  }catch(error){
+    alert(error);
+  }
+}

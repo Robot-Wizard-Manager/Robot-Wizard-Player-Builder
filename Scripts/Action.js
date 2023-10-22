@@ -139,7 +139,7 @@
 
     setActions(action,actionValue,elementValue,typeValue);
     }catch(error){
-        document.getElementById("test").innerHTML = error;
+        document.getElementById("test").innerHTML = error + " at actionUpdate";
     }
  }
  function updateAllActions(){

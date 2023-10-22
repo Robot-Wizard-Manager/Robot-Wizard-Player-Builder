@@ -12,10 +12,10 @@
     <body>
         <div class="staticArea">
             <div class="level">
-                 
-                <label for="level">Level</label>
-                <input type="number" id="level" name="level" min="1" value="1" oninput="levelChange(this.value)">
-                
+                <span\>
+                    <label for="level">Level</label>
+                    <input type="number" id="level" name="level" min="1" value="1" oninput="levelChange(this.value)">
+                </span>
             </div>
             <div class="actionStats">
                 <span class="stats attack">
@@ -99,13 +99,11 @@
 
             </div>
             <div class="buttons">
-                <span>
-                    <a href="https://forms.gle/g3T9rhVac2VRMuk36" target="_blank">
-                    form</a>
-                </span>
-                <button onclick="addAction()">addAction</button>
-                <button onclick="build()">build</button>
-                <button onclick="copyBuild()">copy</button>  
+                    <button onclick="openLink('https://forms.gle/42VRS4YSGMPw7rXn6')">form</button>
+                    <button onclick="addAction()">addAction</button>
+                    <button onclick="build()">export</button>
+                    <button onclick="inportBuild()">import</button>
+                    <button onclick="copyBuild()">copy</button>  
             </div>
             
         </div>
@@ -149,6 +147,13 @@
   
         <p id="test"></p>
         </div>
+        <form id="importBuild" onsubmit="inportSummit(this);return false">
+            <div>
+                <label for="build">Enter Build</label><br>
+                <input type="text" name="build" id="build">
+                <input type="submit">
+            </div>
+        </form>
 
         <!-- Load external JavaScript -->
         
