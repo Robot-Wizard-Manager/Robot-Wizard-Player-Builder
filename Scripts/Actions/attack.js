@@ -41,8 +41,8 @@
     (stats,element)=>{
         
         var base = parseInt(40 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
-        var strong =parseInt( base * 3);
-        var weak = parseInt(base * .5);
+        var strong =parseInt( base * 2.5);
+        var weak = parseInt(base * .9);
         var cost = 100;
         return `Mana Cost ${cost}\n`+
         `Base ${base} damage\n`+
@@ -54,8 +54,8 @@
     (stats,element)=>{
         
         var base = parseInt(40 + (stats.attack * 5) + (getElementValue(element,stats) * 5) );
-        var strong =parseInt( base * 1.5);
-        var weak = parseInt(base * .9);
+        var strong =parseInt( base * 3);
+        var weak = parseInt(base * .5);
         var cost = 100;
         return `Mana Cost ${cost}\n`+
         `Base ${base} damage\n`+
